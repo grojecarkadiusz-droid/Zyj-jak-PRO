@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XP Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- EKRAN DAILY -->
+  <div class="screen" id="screen-daily">
+    <h1>Daily Quest</h1>
+
+    <div class="stats">
+      <p>XP: <span id="xp">0</span></p>
+      <p>Level: <span id="level">1</span></p>
+      <p>Streak: <span id="streak">0</span></p>
+    </div>
+
+    <div class="xp-bar">
+      <div id="xp-fill"></div>
+    </div>
+
+    <select id="difficulty">
+      <option value="10">Easy</option>
+      <option value="20" selected>Normal</option>
+      <option value="40">Hard</option>
+    </select>
+
+    <button id="complete">Zrobione!</button>
+
+    <div id="xp-float">+20 XP</div>
+    <div id="popup" class="popup"><h2>LEVEL UP! 🎉</h2></div>
+    <canvas id="confetti"></canvas>
+    <audio id="level-sound" src="levelup.mp3"></audio>
+  </div>
+
+  <!-- EKRAN WEEKLY AI -->
+  <div class="screen" id="screen-weekly">
+    <h1>Weekly AI Quest</h1>
+    <p id="weekly-task">Kliknij, aby wygenerować zadanie</p>
+    <button id="generate-weekly">Generuj zadanie</button>
+  </div>
+
+  <!-- EKRAN NASTRÓJ -->
+  <div class="screen" id="screen-mood">
+    <h1>Nastrój</h1>
+    <p>Jak się dziś czujesz?</p>
+    <div class="mood-buttons">
+      <button class="mood" data-m="😄">😄</button>
+      <button class="mood" data-m="🙂">🙂</button>
+      <button class="mood" data-m="😐">😐</button>
+      <button class="mood" data-m="😞">😞</button>
+      <button class="mood" data-m="😡">😡</button>
+    </div>
+    <p>Twój nastrój: <span id="mood-display">brak</span></p>
+  </div>
+
+  <!-- EKRAN ACHIEVEMENTS -->
+  <div class="screen" id="screen-achievements">
+    <h1>Osiągnięcia</h1>
+    <ul id="ach-list"></ul>
+  </div>
+
+  <!-- DOLNA NAWIGACJA -->
+  <div class="nav">
+    <button data-target="daily">Daily</button>
+    <button data-target="weekly">Weekly AI</button>
+    <button data-target="mood">Nastrój</button>
+    <button data-target="achievements">Achievements</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
