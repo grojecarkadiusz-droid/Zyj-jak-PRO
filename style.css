@@ -1,0 +1,163 @@
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 32px;
+  text-shadow: 0 0 15px #ff8800;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.active {
+  display: block;
+}
+
+.stats p {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.xp-bar {
+  width: 80%;
+  height: 20px;
+  background: #222;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ff8800;
+}
+
+#xp-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff8800, #ffaa33);
+  transition: width 0.5s ease-out;
+}
+
+button {
+  background: linear-gradient(45deg, #ff8800, #ff5500);
+  border: none;
+  padding: 18px 35px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  box-shadow: 0 0 20px #ff5500;
+  transition: 0.2s;
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ffaa33;
+}
+
+select {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ff8800;
+  margin-bottom: 20px;
+}
+
+#xp-float {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: #ffaa33;
+  text-shadow: 0 0 10px #ff8800;
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff8800;
+  display: none;
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 0 20px #ff8800;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  text-shadow: 0 0 10px #ff8800;
+}
+
+.nav button.active-tab {
+  color: #ff8800;
+  text-shadow: 0 0 20px #ffaa33;
+}
+
+.mood-buttons button {
+  font-size: 30px;
+  padding: 10px;
+  margin: 10px;
+  background: #222;
+  border-radius: 10px;
+  border: 2px solid #ff8800;
+  transition: 0.2s;
+}
+
+.mood-buttons button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px #ffaa33;
+}
+
+#achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+#achievements li {
+  background: #222;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border-left: 5px solid #ff8800;
+}
