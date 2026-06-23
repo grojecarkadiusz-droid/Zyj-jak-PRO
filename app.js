@@ -168,3 +168,6 @@ document.querySelector('.nav button[data-target="daily"]').classList.add("active
 
 updateUI();
 renderAchievements();
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js");
+}
